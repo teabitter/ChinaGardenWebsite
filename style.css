@@ -35,7 +35,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg');
+    background-image: url('https://via.placeholder.com/1200x600/0000FF/808080?text=Hero+Image'); /* Placeholder image */
     background-size: cover;
     background-position: center;
     height: 400px;
