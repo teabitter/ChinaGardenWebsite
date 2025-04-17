@@ -1,0 +1,61 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Clock } from "lucide-react";
+
+export default function ChinaGarden() {
+  return (
+    <div className="min-h-screen bg-yellow-50 text-gray-800">
+      {/* Header */}
+      <header className="bg-red-600 text-white py-6 text-center shadow-md">
+        <h1 className="text-4xl font-bold">China Garden</h1>
+        <p className="text-lg mt-1">Delicious Chinese Takeout in Sarasota</p>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-[url('/hero-image.jpg')] bg-cover bg-center h-[400px] flex items-center justify-center">
+        <div className="bg-black bg-opacity-50 p-6 rounded-xl">
+          <h2 className="text-white text-3xl font-bold mb-2">Fresh, Fast & Flavorful</h2>
+          <Button variant="secondary">View Menu</Button>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="p-8 text-center">
+        <h3 className="text-2xl font-semibold mb-4">About Us</h3>
+        <p className="max-w-2xl mx-auto">
+          China Garden has served Sarasota with authentic Chinese cuisine for over a decade. Known for our flavorful dishes and speedy service, we strive to bring the best of traditional takeout to our community.
+        </p>
+      </section>
+
+      {/* Info Cards */}
+      <section className="grid md:grid-cols-3 gap-6 p-8 max-w-6xl mx-auto">
+        <Card>
+          <CardContent className="flex flex-col items-center py-6">
+            <MapPin className="text-red-600 mb-2" size={32} />
+            <h4 className="font-semibold text-lg">Visit Us</h4>
+            <p>1058 N Tamiami Trail, Sarasota, FL 34236</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="flex flex-col items-center py-6">
+            <Clock className="text-red-600 mb-2" size={32} />
+            <h4 className="font-semibold text-lg">Hours</h4>
+            <p>Mon-Sun: 11:00 AM - 9:30 PM</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="flex flex-col items-center py-6">
+            <Phone className="text-red-600 mb-2" size={32} />
+            <h4 className="font-semibold text-lg">Call Us</h4>
+            <p>(941) 366-6867</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-red-600 text-white py-4 text-center">
+        <p>&copy; {new Date().getFullYear()} China Garden. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
